@@ -21,12 +21,20 @@ object Expressions {
   private val aCondition = true
   private val anIfExpression: Int = if (aCondition) 5 else 3
   //--------------------------------------------------------------------------------------------------------------------
-
+  // A code block is also an expression:
+  private val aCodeBlock: Int = {
+    val x = 10 // local value
+    val y = 20 // local value
+    x + y // last expression is the value of the code block
+  }
+  //--------------------------------------------------------------------------------------------------------------------
+  
   def main(args: Array[String]): Unit = {
-    println(meaningOfLife)
-    println(mathExpression)
-    println(isEqual)
-    println(isTrue)
-    println(anIfExpression)
+    println("meaningOfLife:   " + meaningOfLife)
+    println("mathExpression:   " + mathExpression)
+    println("isEqual:   " + isEqual)
+    println("isTrue:   " + isTrue)
+    println("anIfExpression:   " + anIfExpression)
+    println("aCodeBlock:   " + aCodeBlock)
   }
 }
