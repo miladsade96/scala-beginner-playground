@@ -12,7 +12,12 @@ object Functions {
 
   // Function invocation
   private val aFunctionInvocation: String = aFunction("Hello", 3) // "Hello 3"
+
+  // Function with no arguments
+  private def aNoArgFunction(): Int = 42
+
   def main(args: Array[String]): Unit = {
     println("aFunctionInvocation: " + aFunctionInvocation)
+    println("aNoArgFunction: " + aNoArgFunction())
   }
 }
