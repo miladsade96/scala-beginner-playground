@@ -19,9 +19,17 @@ object Functions {
   // Parameterless function can be called without parentheses
   private def aParameterlessFunction: Int = 42
 
+  // Functions can be recursive
+  private def stringConcatenation(str: String, n: Int): String = {
+    if (n == 0) ""
+    else if (n == 1) str
+    else str + stringConcatenation(str, n - 1)
+  }
+
   def main(args: Array[String]): Unit = {
     println("aFunctionInvocation: " + aFunctionInvocation)
     println("aNoArgFunction: " + aNoArgFunction())
     println("aParameterlessFunction: " + aParameterlessFunction)
+    println("stringConcatenation: " + stringConcatenation("Scala", 3))
   }
 }
