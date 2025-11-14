@@ -16,8 +16,12 @@ object Functions {
   // Function with no arguments
   private def aNoArgFunction(): Int = 42
 
+  // Parameterless function can be called without parentheses
+  private def aParameterlessFunction: Int = 42
+
   def main(args: Array[String]): Unit = {
     println("aFunctionInvocation: " + aFunctionInvocation)
     println("aNoArgFunction: " + aNoArgFunction())
+    println("aParameterlessFunction: " + aParameterlessFunction)
   }
 }
