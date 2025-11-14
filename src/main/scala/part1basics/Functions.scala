@@ -26,10 +26,16 @@ object Functions {
     else str + stringConcatenation(str, n - 1)
   }
 
+  // A void function (Unit return type)
+  private def aVoidFunction(): Unit = {
+    println("This function returns Unit")
+  }
+
   def main(args: Array[String]): Unit = {
     println("aFunctionInvocation: " + aFunctionInvocation)
     println("aNoArgFunction: " + aNoArgFunction())
     println("aParameterlessFunction: " + aParameterlessFunction)
     println("stringConcatenation: " + stringConcatenation("Scala", 3))
+    aVoidFunction()
   }
 }
